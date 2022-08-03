@@ -1,14 +1,14 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
-params.str = 'Hello world!'
+params.str = 'Esto es una prueba'
 
 process splitLetters {
   output:
     path 'chunk_*'
 
   """
-  printf '${params.str}' | split -b 6 - chunk_
+  printf '${params.str}' | split -b 2 - chunk_
   """
 }
 
