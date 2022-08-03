@@ -16,7 +16,7 @@ In this document are summarizes some interesants facts of Nextflow execution.
   ```
   NXF_VER=20.04.0 nextflow run script.sh
   ```
-- To execute Nextflow in local it's neccessary a Java version between 11 and 18. For this, in macOS its helpfull to create an conda enviroment with one of this java versions. In this case, we create java_17 conda enviroment with openjk-17.0.3 java version:
+- To execute Nextflow in local it's neccessary a Java version between 11 and 18. For this, in macOS its helpfull to create a conda enviroment with one of this java versions. In this case, we create java_17 conda enviroment with openjk-17.0.3 java version:
   ```
   conda create -n java_17 openjdk=17
   ```
