@@ -12,17 +12,17 @@ process splitLetters {
   """
 }
 
-process convertToUpper {
+process convertToReverse {
   input:
     file x
   output:
     stdout
 
-  """
-  cat $x | tr '[a-z]' '[A-Z]'
-  """
+    """
+    rev $x
+    """
 }
 
 workflow {
-  splitLetters | flatten | convertToUpper | view { it.trim() }
+  splitLetters | flatten | convertToReverse | view { it.trim() }
 }

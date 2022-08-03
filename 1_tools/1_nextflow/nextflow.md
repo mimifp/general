@@ -2,6 +2,7 @@
 
 In this document are summarizes some interesants facts of Nextflow execution.
 
+- Each process can be written in any scripting language that can be executed by the Linux platform (Bash, Perl, Ruby, Python, etc.). Processes are executed independently and are isolated from each other, i.e. they do not share a common (writable) state. The only way to communicate them is via channels (FIFO queues).
 - Nextflow creates an execution directory by each task; which contains logs, relevant outputs and other files. Each directory is indentify by an unique hash.
 - There are two principal ways to add numeric channels:
   ```
