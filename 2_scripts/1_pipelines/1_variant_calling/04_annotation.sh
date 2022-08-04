@@ -1,4 +1,4 @@
-# Annotation of vcfs with vep tool. 
+# Annotation of vcfs with VEP tool. 
 
 #!/bin/bash
 #SBATCH -c 24
@@ -31,4 +31,3 @@ do
 
   # --dir: Specify the base cache/plugin directory to use. Default = "$HOME/.vep/"
 done
-
