@@ -1,35 +1,34 @@
+# Variant calling with Mutect2 tool. Filter calls with FilterMutectCalls function and pick variants which PASS all filters with vcftools.
+
 #!/bin/bash
 #SBATCH -c 8
-#SBATCH -p thin-shared
 #SBATCH -t 05:00:00
 #SBATCH --mem=30G
 #SBATCH --error=variant_calling.err
 #SBATCH --output=variant_calling.out
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
-#SBATCH --mail-user=miriam.ferreirop@gmail.com
+#SBATCH --mail-type=fail
+#SBATCH --mail-user=your_mail@gmail.com
 
 # Repeat for each file
-samples=(MDA_072
-MDA_1
-BL_40
-BL_49
-BL_56
-BL_53
-BL_88A
-BL_103)
+samples=(one
+sample
+name
+one
+row)
 
-REF=/mnt/lustre/scratch/home/usc/mg/mfp/03_reference_genomes/GRCh37_canon.fa
+REF=/path/to/reference/genome/GRCh37_canon.fa
 
 module load gatk vcftools
 
 for id in ${samples[@]}
 do
   
-  mkdir /mnt/lustre/scratch/home/usc/mg/mfp/02_vcf/02_new_vcf/$id
-  cd /mnt/lustre/scratch/home/usc/mg/mfp/02_vcf/02_new_vcf/$id
+  mkdir /path/to/new_vcf/directory/$id
+  cd /path/to/new_vcf/directory/$id
 
-  gatk Mutect2 -R ${REF}  -I /mnt/lustre/scratch/home/usc/mg/mfp/04_gatk_results/$id_nochr.bam -O $id_somatic.vcf
+  gatk Mutect2 -R ${REF}  -I /path/to/directory/gatk_results/$id_nochr.bam -O $id_somatic.vcf
 
   gatk FilterMutectCalls -R ${REF} -V $id_somatic.vcf -O $id_somatic_filtered.vcf
 
