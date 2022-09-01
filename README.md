@@ -8,5 +8,4 @@ Structure of repository:
   - [2_phylowgs](1_tools/2_phylowgs)
 - 2_scripts:
   - [1_pipelines](2_scripts/1_pipelines)
-    - [1_variant_calling](2_scripts/1_pipelines/1_variant_calling): index bam, preprocess it with GATK best practices, variant calling with Mutect2 and annotation of vcf files with VEP tool.
-  - [2_genomics](2_scripts/2_genomics): usefull scripts to process genomic data and files.
+    - [1_variant_calling](2_scripts/1_pipelines/1_variant_calling): index bam, preprocess it with GATK best practices, variant calling with Mutect2 and annotation of vcf files with VEP tool. One script to convert vcf to MAF format it's included too.
