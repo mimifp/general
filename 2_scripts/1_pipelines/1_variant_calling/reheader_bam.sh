@@ -6,6 +6,7 @@
 #SBATCH --output=reheader.out
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
+#SBATCH --mail-type=fail
 #SBATCH --mail-user=miriam.ferreirop@gmail.com
 
 module load samtools
