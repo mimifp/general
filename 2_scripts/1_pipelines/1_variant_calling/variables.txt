@@ -1,0 +1,10 @@
+REF_FILE=/mnt/netapp2/translational_oncology/path/to/reference/fasta/file
+FASTA_FILE=/mnt/netapp2/translational_oncology/2_projects/path/to/fasta/file
+SAM_PATH=/mnt/netapp2/translational_oncology/2_projects/path/to/sam/directory
+BAM_PATH=/mnt/netapp2/translational_oncology/2_projects/path/to/bam/directory
+VEP_REF=/mnt/netapp2/translational_oncology/1_tools/.vep/homo_sapiens/102_hg19_v5/hg19.fa
+DICT_FILE=/mnt/netapp2/translational_oncology/1_tools/.vep/homo_sapiens/102_hg19_v5/hg19.dict
+REF_FILES_PATH=/mnt/netapp2/translational_oncology/2_projects/path/to/reference_files
+GATK_PATH=/mnt/netapp2/translational_oncology/2_projects/path_to_gatk_results
+VCF_PATH=/mnt/netapp2/translational_oncology/2_projects/path_to_vcf
+VEP_PATH=/mnt/netapp2/translational_oncology/1_tools/.vep
