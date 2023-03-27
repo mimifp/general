@@ -1,4 +1,6 @@
-# Function Arguments
+##########################
+### Function Arguments ###
+##########################
 
 tables = {
   1: ['Jiho', False],
@@ -19,3 +21,11 @@ def assign_table(table_number, name, vip_status = False):
 assign_table(6, 'Yoni', False)
 assign_table(table_number = 3, name = 'Martha', vip_status = True)
 assign_table(4, 'Karla')
+
+### Variable Number of Arguments ###
+def print_order(*order_items):
+  print(order_items)
+
+print_order('Orange Juice', 'Apple Juice', 'Scrambled Eggs', 'Pancakes')
+
+### Combine unpacking operator ###
