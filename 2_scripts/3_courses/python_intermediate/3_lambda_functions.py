@@ -9,3 +9,7 @@ def add_two(my_input):
 
 # Lamda function
 add_two = lambda my_input: my_input + 2
+
+check_if_A_grade = lambda grade: 'Got an A!' if grade >= 90 else 'Did not get an A.'
+
+### Introduction to Higher-Order Functions ###
